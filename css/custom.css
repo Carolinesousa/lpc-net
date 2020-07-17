@@ -1,0 +1,356 @@
+.wizard{
+  display: none/;
+}
+
+body {
+	margin-top:120px;
+}
+
+@font-face {
+     font-family: boston;
+     src: url('../fonts/BostonBoldIt.otf');
+}
+
+@font-face {
+     font-family: Robotor;
+     src: url('Roboto-Regular.ttf');
+}
+@font-face {
+     font-family: bahnschrift;
+     src: url('../fonts/BAHNSCHRIFT.ttf');
+}
+
+/* Menu */
+.nav-logo{
+	padding-top: 10px;
+	padding-left: 5px;
+	width:20%;
+	
+}
+.navbar-nav{float:right;margin-top:-60px;}
+.navbar-inverse .navbar-nav>li>a{color:#3e4095; font-weight: bold; float:right; text-transform:uppercase; font-family:bahnschrift;}
+.tr{color:white !important; font-weight: bold; }
+.navbar-inverse .navbar-nav>li>a:hover{
+	color: black !important;
+}
+.navbar-inverse{
+	background-color:#fff;
+	border:transparent;
+}
+.networks{
+	background-color:#3234A2;
+	padding:2px;
+	color:white;
+	font-family:bahnschrift;
+	font-size:15px;
+}
+.icon-bar{
+	background-color: black !important;
+}
+.navbar-toggle{
+	margin-top:20px;
+}
+.active > a{
+	background-color: #3234A2 !important;
+}
+
+/*index*/
+.hero{
+  
+    
+    /* Background styles */
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.logo_index{
+	width:90%;
+	padding-bottom:20px;
+}
+.text_welcome{
+	font-family:"Roboto";
+	font-size:20px;
+}
+/*fim index*/
+/*advertising*/
+.advertising{
+	background-image: url(../img/a.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+	padding:20px;
+	padding-left:20px;
+}
+.title-advertising{
+	color:white;
+	font-family:bahnschrift;
+	font-size:20px;
+	text-transform:uppercase;
+	
+}.title-home{
+	color:yellow;
+	font-family:bahnschrift;
+	font-size:20px;
+	
+	text-transform:uppercase;
+}.subtitle-advertising{
+	color:white;
+	font-family:bahnschrift;
+	font-size:18px;
+	text-transform:uppercase;
+}
+.img-advertising{
+	width:90%;
+	float:center;
+	}
+/*fim advertising*/
+/*Planos*/
+.planos{
+	
+	padding-top:40px;
+	padding-bottom:40px;
+	padding-left:20px;
+	text-align:center;
+}
+.title-planos{
+	color:#3234A2;
+	font-family:bahnschrift;
+	font-size:25px;
+	text-transform:uppercase;
+	font-weight:bold;
+	text-align:left;
+	padding-bottom:20px;
+	padding-left:20px;
+	
+	
+}
+.card{
+	margin-bottom:20px;
+	float:center;
+	border-radius:10px;
+	border:transparent;
+	background-color:#F2F2F2;
+	 -webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.4);
+        -moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.4);
+        box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.4);
+}
+.card-header{
+	border-radius:10px 10px 0px 0px !important;
+	background-color:#3234A2;
+	color:white;
+	text-align:center;
+	font-family:boston;
+	font-size:25px;
+	text-transform:uppercase;
+}
+.card-body{text-align:center;padding-bottom:30px;}
+.card-text{
+	color:black;
+	text-align:left;
+	font-family:bahnschrift;
+	font-size:15px;
+	border-bottom: 1px dashed #3234A2; 
+	margin-left:20px;
+	margin-right:20px;
+	padding-bottom:10px;
+	}
+.card-value{
+	color:black;
+	text-align:center;
+	font-family:bahnschrift;
+	font-size:23px;
+	}
+.btn-subscribe{
+background:    #ff0000;
+border-radius: 15px;
+color:         #ffffff;
+font:          normal 15px/1 "Roboto", sans-serif;
+text-align:    center;
+padding:10px;
+}
+.planos-card{padding:0px 40px;float:center;}
+/*fim Planos*/
+/*benefits*/
+.benefits{
+	background-image: url(../img/benefits.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+	padding:70px 20px;
+	text-align:center;
+}
+.title{
+	color:white;
+	font-family:bahnschrift;
+	font-size:25px;
+	text-transform:uppercase;
+	font-weight:bold;
+	text-align:left;
+	padding-bottom:20px;
+	
+}.title-benefits{
+	color:white;
+	font-family:bahnschrift;
+	font-size:18px;
+	padding-left:15px;
+	padding-top:20px;
+	text-align:justify;
+	
+	
+}.subtitle-benefits{
+	color:white;
+	font-family:bahnschrift;
+	font-size:15px;
+	padding:5px 15px;;
+	
+	text-align:justify;
+}
+.benefits-icon{
+	margin-top: 20px;
+    width: 80px;
+	height:80px;
+    border-radius: 50%;
+    padding: 5px;
+    background: white;
+	padding:10px;
+	}
+
+.benefits-card{padding:0px 20px;float:center;}
+/*fim benefits*/
+
+
+/*call*/
+.call{
+	background: red;
+    padding:10px;
+	padding-left:20px;
+}
+.title-call{
+	color:white;
+	font-family:bahnschrift;
+	font-size:18px;
+	text-transform:uppercase;
+	
+}.title-housecall{
+	color:yellow;
+	font-family:bahnschrift;
+	font-size:18px;
+	
+	text-transform:uppercase;
+}.subtitle-call{
+	color:white;
+	font-family:bahnschrift;
+	font-size:15px;
+}
+.img-advertising{
+	width:90%;
+	float:center;
+	}
+.btn-call{
+background:    #3234A2;
+border-radius: 4px;
+color:         #ffffff;
+font:          normal 15px/1 "Roboto", sans-serif;
+text-align:    center;
+padding:10px 20px;
+margin-left:-10px;
+}
+.div-call{
+	padding-top:20px;
+}
+	/*fim call*/
+/*footer*/
+footer{
+    color:white;
+	font-size:12px;
+	background-color:black;
+	padding:20px;
+	color: #fff;
+	width: 100%;
+	bottom: 0;
+	padding-top:30px;
+	padding-bottom:50px;
+  
+  
+}
+.title-footer{
+	color:white;
+	font-family:bahnschrift;
+	font-size:16px;
+	text-transform:uppercase;
+	
+}
+.link-footer  {
+	color:white;
+	font-family:bahnschrift;
+	font-size:14px;
+	
+}
+.footer-img{
+	width:50%;
+}
+/*fim footer*/
+
+
+.btn-cont{
+background:    #ff0000;
+background:    linear-gradient(#ff0000, #c71a1a);
+border-radius: 4px;
+padding:       20px 48px;
+color:         #ffffff;
+display:       inline-block;
+font:          normal bold 21px/1 "Roboto", sans-serif;
+text-align:    center;}
+
+
+.modal-img{
+	margin-top: -26px;
+    width: 20%;
+	height:50%;
+    border: 5px solid white;
+    border-radius: 50%;
+    padding: 5px;
+    background: #dfdede;
+	padding:10px;
+}
+
+
+
+@media screen and (min-width: 1px) and (max-width: 767px) {
+    .hidden-xs{
+		display: none !important;
+	}
+	.nav-logo{
+	padding-top: 10px;
+	padding-left: 5px;
+	width:60%;
+	margin-top:-70px;
+}
+	}
+/* min-width */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .hidden-sm{
+		display: none !important;
+	}
+	.nav-logo{
+	padding-top: 10px;
+	padding-left: 5px;
+	width:30%;
+	
+}
+}
+
+ 
+/* min-width & max-width */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .hidden-md{
+		display: none !important;
+	}
+	
+}
+/* max device width */
+@media screen and (min-width: 1200px) {
+    .hidden-lg{
+		display: none !important;
+	}
+	
+}
+
