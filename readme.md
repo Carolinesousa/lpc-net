@@ -1,3 +1,3 @@
 LPC-NET
 
-Repositorio de Valdir
+Site provedor de internet
