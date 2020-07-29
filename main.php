@@ -138,8 +138,9 @@
 				<h5 class="card-text"><img src="img/wifi.png" width=20 height=20>  <?php echo $escrever['descricao3']; ?></h5>
 				
 				<p class="card-value">R$ <?php echo $escrever['valor'];?></p>
+				<form class="form-login" method="post" action="#subscribeModal">
 				<a type="button" class="btn btn-subscribe" data-toggle="modal" data-target="#subscribeModal">Assine já</a>
-								
+				</form>				
 			</div>
 			</div>
 		  </div>
@@ -189,8 +190,8 @@
 			</div>
 	  </div>
 	  </div>
-	  <div class="modal fade text-center py-5" style="top:50px; height:100%;" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md" role="document">
+	  <div class="modal fade text-center" style="top:50px; height:100%;" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-body">
                 <img src="img/wifi.png" class="modal-img" width=100 height=100>
