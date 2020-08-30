@@ -87,34 +87,48 @@
   	<div class="row contact">
   	<div class="offset-md-1 col-md-4">
   		<h5 class="title-contact">Contact us</h5>
-  		<p class="subtitle-contact">
+  		<div class="subtitle-contact">
   			<p><i class="fa fa-map-marker"></i>R. Roseno de Matos, 105 - Centro, Antonina do Norte</p>
-  			<p><i class="fa fa-map-marker"></i>(88) 3525-1210 (88) 99276-1815</p>
+  			<p><i class="fa fa-phone"></i>(88) 3525-1210 (88) 99276-1815</p>
 			<p><i class="fa fa-whatsapp"></i>(88) 99400-5699 - WhatsApp </p>
   			<p><i class="fa fa-envelope-o"></i>R. Roseno de Matos, 105 - Centro, Antonina do Norte</p>
   			
-  		</p>
+  		</div>
 	  
   	</div>
   	<div class="offset-md-1 col-md-5 margin">
+  			<form class="form-contact" id="contact" name="contact" method="post" 
+			action="actions/contactaction.php">
 		     	<div class="form-group">
-		    <input type="input" class="form-control" id="exampleInputPassword1" placeholder="Nome">
+		    <input type="input" class="form-control" id="nome" name="nome" placeholder="Nome">
 		  </div>
 		  <div class="form-group">
-		    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-		    <small id="emailHelp" class="form-text text-muted">Ex: nome@gmail.com</small>
+		    <input type="input" class="form-control" id="telefone" name="telefone" placeholder="Telefone">
 		  </div>
 		  
 		  <div class="form-group">
-		    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Escreva algo...</textarea>
+		    <textarea class="form-control" id="mensagem" name="mensagem" rows="3">Escreva algo...</textarea>
 		  </div>
-		  <button type="submit" class="btn btn-cont">Submit</button>
+		  <button type="submit" class="btn btn-cont">Enviar</button>
 		</form>
    </div>
 
   </div>
   <div class="row map">
-  
+  	<div class="offset-md-1 col-md-10">
+  		<p class="title-faq">Áreas de cobertura</p>
+  	</div>
+  	<div class="offset-md-1 col-md-5 mymap">
+  		<div style="height: 100%; width:100%; display:inline-block; overflow:hidden;">
+            <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1neR9VxC-k_t7ZD71wf895LrBXyXoEV7n"
+            frameborder="0" style="border: none; position:relative; top: -55px;" width="100%" height="100%"></iframe>
+  	</div>
+  	</div>
+  	<div class="offset-md-1 col-md-4">
+  	<p class="title-map">Você está dentro da área de cobertura?</p>
+  	<p class="subtitle-map">Clique em fale conosco entre em contato hoje mesmo</p>
+	<button type="submit" class="btn btn-subscribe">Fale conosco</button>
+  	</div>
   </div>
 <div class="row contactus">
   	<div class=" offset-md-1 col-md-10">
@@ -126,7 +140,7 @@
         <div class="card-faq">
             <div class="card-headerw" id="headingOne">
                 <h2 class="mb-0">
-                    <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"> What is HTML? <i class="fa fa-arrow-down rigth"></i></button>									
+                    <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"> What is HTML? <i class="fa fa-arrow-down right"></i></button>									
                 </h2>
             </div>
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
@@ -138,7 +152,7 @@
         <div class="card-faq">
             <div class="card-headerw" id="headingd">
                 <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsed"><i class="fa fa-arrow-down <p>"></i> What is CSS?</button>                     
+                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsed"> What is CSS?<i class="fa fa-arrow-down right"></i></button>                     
                 </h2>
             </div>
             <div id="collapsed" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
@@ -150,7 +164,7 @@
         <div class="card-faq">
             <div class="card-headerw" id="headingThree">
                 <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"><i class="fa fa-arrow-down rigth"></i> What is CSS?</button>                     
+                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree">What is CSS?<i class="fa fa-arrow-down right"></i> </button>                     
                 </h2>
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">

@@ -43,7 +43,7 @@
 				<label class="Inputlogin">Selecione uma cidade:</label>
 				<div class="row">
 				<div class="col-md-9 div-select ">
-				<select  data-style="btn-danger" id="cpf" name="cpf">
+				<select id="cidade" name="cidade">
 				<?php while($escrever=mysqli_fetch_array($resultado)){ ?>
 					<option><?php echo $escrever['cidade'];?></option>
 				<?php }?>
@@ -54,7 +54,7 @@
 			</div>
 			</div>
 			</div>
-			</form>
+			</form> 
       </div>
     </div>
       
