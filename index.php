@@ -24,7 +24,7 @@
  <?php
 		include("conexao.php");
 		
-		$consulta = "SELECT DISTINCT cidade FROM planos";
+		$consulta = "SELECT DISTINCT id,cidade FROM cidades";
 		$resultado = mysqli_query($conexao,$consulta)
 		or die ("Falha na execução da consulta");
 	
@@ -43,11 +43,13 @@
 				<label class="Inputlogin">Selecione uma cidade:</label>
 				<div class="row">
 				<div class="col-md-9 div-select ">
-				<select id="cidade" name="cidade">
+
+				<select id="id" name="id">
 				<?php while($escrever=mysqli_fetch_array($resultado)){ ?>
-					<option><?php echo $escrever['cidade'];?></option>
+					<option value="<?php echo $escrever['id'];?>"><?php echo $escrever['cidade'];?></option>
 				<?php }?>
 				</select>
+				
 				</div>
 				<div class="col-md-3">
 				<button type="submit" class="btn btn-primary btn-danger">></button>

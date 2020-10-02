@@ -14,19 +14,7 @@ function setaDadosModal(valor) {
 <a data-toggle="modal" data-target="#modal" class="btn btn-primary" onclick="setaDadosModal('carol')">
     <span class="btn-label"><i class="fa fa-check"></i></span>Abrir modal
 </a>
-<div id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
-    <div class="modal-dialog modal-md">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="panel-body">
-                    <form id="modalExemplo" method="post" action="">
-                        <input type="text" name="campo" id="campo">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

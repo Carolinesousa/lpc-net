@@ -36,9 +36,11 @@
 	session_start();	
 		include("conexao.php");
 		
-		$cidade = $_POST['cidade'];
-		$_SESSION['cidade'] = $cidade;
-		$consulta = "SELECT * FROM planos WHERE cidade = '$cidade'";
+		
+		$id = $_POST['id'];
+
+		
+		$consulta = "SELECT * FROM planos INNER JOIN cidades ON cidades.id = planos.id_cidade WHERE id_cidade = '$id'";
 		$resultado = mysqli_query($conexao,$consulta)
 		or die ("Falha na execução da consulta");
 	
@@ -47,7 +49,7 @@
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
 		<div class="row networks">
-			<div class="col-md-4 col-sm-5 col-lg-4 "><img src="img/pin.png" width=20 height=20> Você esta em: <?php echo $cidade; ?></div>
+			<div class="col-md-4 col-sm-5 col-lg-4 "><img src="img/pin.png" width=20 height=20> Você esta em: <?php echo $id; ?></div>
 			<div class="offset-md-7 col-md-1 hidden-xs icons-networks">
 				<a href="index.php"><img src="img/instagram.png" alt="instagram"></a>
 				<a href="index.php"><img src="img/whatsapp.png" alt="whatsapp"></a>
@@ -129,13 +131,15 @@
 	    <div class="col-md-12">
 	  <p class="title-planos">planos</p>
 	</div>
-	  <?php while($escrever=mysqli_fetch_array($resultado)){ ?>
+	  <?php while($escrever=mysqli_fetch_array($resultado)){ 
+	  	$_SESSION['cidade'] =  $escrever['cidade']; ;
+	  	?>
 		  <div class="col-md-3 planos-card">
 			<div class="card">
 				<div class="card-header">
 				<p class="velocidade"><?php echo $escrever['velocidade']; ?></p>MEGA</div>
 			<div class="card-body text-primary">
-				<h5 class="card-text"><img src="img/wifi.png" width=20 height=20>  <?php echo $escrever['descricao1']; ?></h5>
+				<h5 class="card-text"><img src="img/wifi.png" width=20 height=20>  <?php echo $escrever['descricao1'];  ?></h5>
 				<h5 class="card-text"><img src="img/wifi.png" width=20 height=20>  <?php echo $escrever['descricao2']; ?></h5>
 				<h5 class="card-text"><img src="img/wifi.png" width=20 height=20>  <?php echo $escrever['descricao3']; ?></h5>
 				
@@ -174,6 +178,13 @@
 	  
       
   </div>
+
+	<div class="row velocimeter">
+	<div class="col-md-5"></div>
+	<div class="col-md-3"></div>
+		
+
+	</div>
 	<div class="row call">
       <div class="offset-md-1 col-md-4 col-12">
       <h5 class="title-call">Nós ligamos

@@ -25,7 +25,22 @@
 
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-  <script>
+   <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+<script>
 function setaDadosModal(valor) {
     document.getElementById('campo').value = valor;
 }
@@ -35,14 +50,14 @@ function setaDadosModal(valor) {
 <body id="page-top">
 
   <!-- Page Wrapper -->
-  <div id="wrapper" >
+ <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav  sidebar sidebar-dark accordion bg-black" id="accordionSidebar">
+    <ul class="navbar-nav bg-black sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex " href="index.html">
-        <div class="sidebar-brand-icon">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+         <div class="sidebar-brand-icon">
           <img src="../img/wifi.png" style="width:2.5rem; margin-right: 5px;">
         </div>
         <div class="sidebar-brand-text mx-3" style="font-size: 1.5rem;">LPC-NET </div>
@@ -52,7 +67,7 @@ function setaDadosModal(valor) {
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="index.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
@@ -63,31 +78,83 @@ function setaDadosModal(valor) {
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Paginas
+        Interface
       </div>
 
+      <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="utilities-color.html">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Cidade</span>
-        </a>
-      </li>
-
-     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Planos</span>
+          <span>Components</span>
         </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Custom Components:</h6>
+            <a class="collapse-item" href="buttons.html">Buttons</a>
+            <a class="collapse-item" href="cards.html">Cards</a>
+          </div>
+        </div>
       </li>
 
-     <li class="nav-item">
-            <a class="nav-link collapsed" href="utilities-color.html">
-              <i class="fas fa-fw fa-wrench"></i>
-              <span>Contato</span>
-            </a>
-          </li>
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>Utilities</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Custom Utilities:</h6>
+            <a class="collapse-item" href="utilities-color.html">Colors</a>
+            <a class="collapse-item" href="utilities-border.html">Borders</a>
+            <a class="collapse-item" href="utilities-animation.html">Animations</a>
+            <a class="collapse-item" href="utilities-other.html">Other</a>
+          </div>
+        </div>
+      </li>
 
-      
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Addons
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Pages</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Login Screens:</h6>
+            <a class="collapse-item" href="login.html">Login</a>
+            <a class="collapse-item" href="register.html">Register</a>
+            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+            <div class="collapse-divider"></div>
+            <h6 class="collapse-header">Other Pages:</h6>
+            <a class="collapse-item" href="404.html">404 Page</a>
+            <a class="collapse-item" href="blank.html">Blank Page</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="charts.html">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>Charts</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Tables</span></a>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
@@ -97,7 +164,6 @@ function setaDadosModal(valor) {
       </div>
 
     </ul>
-
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -114,24 +180,48 @@ function setaDadosModal(valor) {
             <i class="fa fa-bars"></i>
           </button>
 
-        
+          <!-- Topbar Search -->
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+              </div>
+            </div>
+          </form>
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-            
+            <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
 
-            <!-- Nav Item - Alerts -->
            
-            <!-- Nav Item - Messages -->
-            
+
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-                <img class="img-profile rounded-circle" src="https://img.icons8.com/color/48/000000/admin-settings-male.png">
-
+                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -164,74 +254,144 @@ function setaDadosModal(valor) {
 
         <!-- Begin Page Content -->
          <div class="container-fluid">
-              <?php
-                      include('../conexao.php');
-                      include('modal.php');
-                          
-                        $consulta = "SELECT * FROM planos";
-                        $resultado = mysqli_query($conexao ,$consulta)
-                        or die ("Falha na execução da consulta");
-                      
-                      ?>
-
-
-          <!-- Page Heading -->
           <h1 class="h3 mb-2 text-gray-800">Planos</h1>
-          <!-- DataTales Example -->
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary"></h6>
+          <div class="row">
+            <div class="offset-md-1 col-md-10">
+              <form id="form-planos" name="form-planos" method="post" 
+        action="actions/createplanos.php">
+              <div class="form-row">
+                <div class="col-md-4 mb-3">
+                  <label for="validationCustom01">Velocidade</label>
+                  <input type="text" class="form-control" id="velocidade" name="velocidade" placeholder="velocidade" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="validationCustom02">Valor</label>
+                  <input type="text" class="form-control" id="valor" name="valor" placeholder="Valor" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="validationCustomUsername">Descrição 1</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    </div>
+                    <input type="text" class="form-control" id="descricao1" name="descricao1" placeholder="Descrição" required>
+                    <div class="invalid-feedback">
+                      Please choose a username.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="validationCustom03">Descrição 2</label>
+                  <input type="text" class="form-control" id="descricao2" name="descricao2" placeholder="Descrição" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="validationCustom04">Descrição 3</label>
+                  <input type="text" class="form-control" id="descricao3" name="descricao3" placeholder="State" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid state.
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+              <div class="form-group col-md-6 ">
+                <?php
+                   include('../conexao.php');
+                  $consulta_cidade = "SELECT DISTINCT id,cidade FROM cidades";
+                  $resultado_cidade = mysqli_query($conexao,$consulta_cidade)
+                  or die ("Falha na execução da consulta");     
+                ?>
+                <select class="form-control" id="id_cidade" name="id_cidade" required>
+                <?php while($escrever_cidade=mysqli_fetch_array($resultado_cidade)){ ?>
+                <option value="<?php echo $escrever_cidade['id'];?>"><?php echo $escrever_cidade['cidade'];?></option>
+                <?php }?>
+              </select>
+              </div>
+               <div class="col-md-6 mb-3">
+              <button class="btn btn-primary" type="submit">Cadastrar plano</button>
             </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Cidade</th>
-                      <th>Velocidade</th>
-                      <th>Valor</th>
-                      <th>Descriçao 1</th>
-                      <th>Descriçao 2</th>
-                      <th>Descriçao 3</th>
-                      <th></th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tfoot>
-                    <tr>
-                      
-                      <th>ID</th>
-                      <th>Cidade</th>
-                      <th>Velocidade</th>
-                      <th>Valor</th>
-                      <th>Descriçao 1</th>
-                      <th>Descriçao 2</th>
-                      <th>Descriçao 3</th>
-                      <th></th>
-                      <th></th>
-                    </tr>
-                  </tfoot>
-                  <tbody>
-                    <?php while($escrever=mysqli_fetch_array($resultado)){
-                    ?>
-                      
-                      <tr>
-                        <td><?php echo $escrever['id'];?></td>
-                        <td><?php echo $escrever['Cidade'];?></td>
-                        <td><?php echo $escrever['velocidade'];?></td>
-                        <td><?php echo $escrever['valor'];?></td>
-                        <td><?php echo $escrever['descricao1'];?></td>
-                        <td><?php echo $escrever['descricao2'];?></td>
-                        <td><?php echo $escrever['descricao3'];?></td>
-                        <td><button type="button" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal" onclick="setaDadosModal('carol')">Editar</button></td>
-                        <td><a href="excluir/excluirmensagem.php?id=<?php echo $escrever['id'];?>" type="button" class="btn btn-xs btn-danger">Apagar</a></td>
-                        </td>
-                      </tr> 
-                                
-                   <?php } ?> 
-                  </tbody>
-                </table>
+            </div>
+            </form>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+          <div class="col-md-12">
+                  <?php
+                 
+                      $consulta = "SELECT * FROM planos INNER JOIN cidades ON cidades.id = planos.id_cidade";
+                            $resultado = mysqli_query($conexao ,$consulta)
+                            or die ("Falha na execução da consulta");
+                          
+                          ?>
+
+
+              <!-- Page Heading -->
+              
+              <!-- DataTales Example -->
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary"></h6>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Cidade</th>
+                          <th>Velocidade</th>
+                          <th>Valor</th>
+                          <th>Descriçao 1</th>
+                          <th>Descriçao 2</th>
+                          <th>Descriçao 3</th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tfoot>
+                        <tr>
+                          
+                          <th>ID</th>
+                          <th>Cidade</th>
+                          <th>Velocidade</th>
+                          <th>Valor</th>
+                          <th>Descriçao 1</th>
+                          <th>Descriçao 2</th>
+                          <th>Descriçao 3</th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                      </tfoot>
+                      <tbody>
+                        <?php while($escrever=mysqli_fetch_array($resultado)){
+                        ?>
+                          
+                          <tr>
+                            <td><?php echo $escrever['ID'];?></td>
+                            <td><?php echo $escrever['cidade'];?></td>
+                            <td><?php echo $escrever['velocidade'];?></td>
+                            <td><?php echo $escrever['valor'];?></td>
+                            <td><?php echo $escrever['descricao1'];?></td>
+                            <td><?php echo $escrever['descricao2'];?></td>
+                            <td><?php echo $escrever['descricao3'];?></td>
+                            <td><button type="button" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#modal" onclick="setaDadosModal('carol')">Editar</button></td>
+                            <td><a href="excluir/excluirmensagem.php?id=<?php echo $escrever['id'];?>" type="button" class="btn btn-xs btn-danger">Apagar</a></td>
+                            </td>
+                          </tr> 
+                                    
+                       <?php } ?> 
+                      </tbody>
+                    </table>
+              </div>
+              </div>
               </div>
             </div>
           </div>
@@ -294,20 +454,8 @@ function setaDadosModal(valor) {
       </div>
     </div>
   </div>
-<script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
-
-  <!-- Page level plugins -->
-  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="js/demo/datatables-demo.js"></script>
-
+ <!-- Bootstrap core JavaScript-->
+ 
 </body>
 
 </html>
