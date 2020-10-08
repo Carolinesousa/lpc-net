@@ -32,12 +32,26 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
- 
+  <script>
+    $(document).ready(function(){
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.show").each(function(){
+        	$(this).prev(".card-headerw").find(".fa").addClass("fa-arrow-up").removeClass("fa-arrow-down");
+        });
+        
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+        	$(this).prev(".card-headerw").find(".fa").removeClass("fa-arrow-down").addClass("fa-arrow-up");
+        }).on('hide.bs.collapse', function(){
+        	$(this).prev(".card-headerw").find(".fa").removeClass("fa-arrow-up").addClass("fa-arrow-down");
+        });
+    });
+</script>
 </head>
 
 <body>
 	
-  <nav class="navbar navbar-inverse navcolor navbar-fixed-top">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
 		<div class="row networks">
 			<div class="col-md-4 col-sm-5 col-lg-4 "><img src="img/pin.png" width=20 height=20> Você esta em: </div>
@@ -56,9 +70,9 @@
 			</button>
 			
 		</div>
-	  <a href="index.php"><img src="img/logo_friend.png" alt="some text" class="nav-logo"></a>
+	  <a href="index.php"><img src="img/logo2.png" alt="some text" class="nav-logo"></a>
       <div id="navbar" class="collapse navbar-collapse nav-options">
-        <ul class="nav navbar-nav navfont">
+        <ul class="nav navbar-nav">
           <li><a href="#">Home</a></li>
           <li><a href="#about">Quem somos</a></li>
           <li><a href="#contact">Contato</a></li>
@@ -70,34 +84,42 @@
   </nav>
 
   <div class="container-fluid">
-    <div class="row hero-friend">
-    </div>
-    <div class="row howworks">
-    <div class="col-md-12">
-      <h5 class="title-works">Veja como Funciona:</h5>
-    </div>
+  	<div class="row contact">
+  
+  	<div class="offset-md-1 col-md-5 margin">
+  			<form class="form-contact" id="contact" name="contact" method="post" 
+			action="actions/contactaction.php">
+          <h1>Seus dados</h1>
+		     	<div class="form-group">
+		    <input type="input" class="form-control" id="nome" name="nome" placeholder="Nome">
+		  </div>
+		  <div class="form-group">
+		    <input type="input" class="form-control" id="cpf" name="cpf" placeholder="CPF">
+		  </div>
+		  <h1>Indique seu amigo</h1>
+		  <div class="form-group">
+        <input type="input" class="form-control" id="nome" name="nome" placeholder="Nome">
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+      </div>
+       <div class="form-group">
+        <input type="input" class="form-control" id="telefone" name="telefone" placeholder="Telefone">
+      </div>
+		  <button type="submit" class="btn btn-cont">Enviar</button>
+		</form>
+   </div>
 
-    <div class="offset-md-3 col-md-6">
-    <div class="col-md-4">
-      <i class="fa fa-share-square-o" aria-hidden="true"></i>
+  </div>
+  <div class="row contactus">
+  	<div class=" offset-md-1 col-md-10">
+  		<h5 class="title-faq">Como Funciona</h5>
+  	</div>
 
-    </div>
-    <div class="col-md-4">
-      <i class="fa fa-user" aria-hidden="true"></i>
+  	</div>
 
-    </div>
-
-    <div class="col-md-4">
-      <i class="fa fa-handshake-o" aria-hidden="true"></i>
-
-    </div>
-
-
-    </div>
-
-    
-    </div>
-
+</div>
+</div>
  <div class="row">
 		<footer>							
 		<?php include("footer.php")?>
